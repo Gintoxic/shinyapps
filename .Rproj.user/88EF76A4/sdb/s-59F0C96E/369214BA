@@ -1,0 +1,17 @@
+{
+    "contents" : "require(rCharts)\nrequire(rjson)\n\nlinks <- matrix(unlist(\n  rjson::fromJSON(\n    file = \"http://bost.ocks.org/mike/sankey/energy.json\"\n  )$links\n),ncol = 3, byrow = TRUE)\nnodes <- unlist(\n  rjson::fromJSON(\n    file = \"http://bost.ocks.org/mike/sankey/energy.json\"\n  )$nodes\n)\n\nlinks <- data.frame(links)\ncolnames(links) <- c(\"source\", \"target\", \"value\")\nlinks$source <- sapply(links$source, FUN = function(x) {return(as.character(nodes[x+1]))}) #x+1 since js starts at 0\nlinks$target <- sapply(links$target, FUN = function(x) {return(nodes[x+1])}) #x+1 since js starts at 0\nsankeyPlot <- rCharts$new()\nsankeyPlot$setLib('http://timelyportfolio.github.io/rCharts_d3_sankey')\nsankeyPlot$set(\n  data = links,\n  nodeWidth = 15,\n  nodePadding = 10,\n  layout = 32,\n  width = 960,\n  height = 500,\n  units = \"TWh\",\n  title = \"Sankey Diagram\"\n)\nsankeyPlot",
+    "created" : 1442269213926.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3392396426",
+    "id" : "369214BA",
+    "lastKnownWriteTime" : 1442269232,
+    "path" : "E:/Work/shinyapps/sankey/sankey1.R",
+    "project_path" : "sankey/sankey1.R",
+    "properties" : {
+        "tempName" : "Untitled5"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nrunApp(\"kmeans\")\n",
+    "created" : 1442268427059.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1711203905",
+    "id" : "56853CA4",
+    "lastKnownWriteTime" : 3312752,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

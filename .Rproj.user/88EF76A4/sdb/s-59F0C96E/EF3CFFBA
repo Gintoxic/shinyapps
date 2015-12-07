@@ -1,0 +1,17 @@
+{
+    "contents" : "#install.packages(\"devtools\")\n\nlibrary(\"devtools\")\ninstall_github('ramnathv/rCharts')\n\n\ninstall.packages(\"Rcpp\")\n",
+    "created" : 1442269082132.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "675637075",
+    "id" : "EF3CFFBA",
+    "lastKnownWriteTime" : 29836824280170608,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
